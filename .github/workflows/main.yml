@@ -26,6 +26,6 @@ jobs:
     - name: Run lintr
       run: Rscript -e 'lintr::lint_package()'
     - name: scan your project
-      uses: anchor/scan-action@v3
+      uses: anchore/scan-action@v3
       with:
         path: "."

@@ -1,6 +1,5 @@
 name: Build and Security Scan
-on: 
-  workflow_dispatch:
+on: push
 jobs:
   build-and-scan:
     runs-on: arc-runner-set

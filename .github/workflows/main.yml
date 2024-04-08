@@ -16,17 +16,17 @@ jobs:
         r-version: 4.3.2 # Specify your desired R
         
     - name: Lint code base
-      uses: github/super-linter@v4
-      # env:
-      #   VALIDATE_ALL_CODEBASE: false
-      #   DEFAULT_BRANCH: main
-      #   GITHUB_TOKEN: ${{ steps.getPass.outputs.secret }}
-      #   GITHUB_EVENT_PATH: /__w/_temp/_github_workflow/event.json
-      #   VALIDATE_KUBERNETES_KUBEVAL: false
+      # uses: github/super-linter@v4
+      env:
+        VALIDATE_ALL_CODEBASE: false
+        DEFAULT_BRANCH: main
+        GITHUB_TOKEN: ${{ steps.getPass.outputs.secret }}
+        GITHUB_EVENT_PATH: /__w/_temp/_github_workflow/event.json
+        VALIDATE_KUBERNETES_KUBEVAL: false
 
-      # run: |
-      #   export GITHUB_EVENT_PATH=/__w/_temp/_github_workflow/event.json
-      #   /action/lib/linter.sh
+      run: |
+        export GITHUB_EVENT_PATH=/__w/_temp/_github_workflow/event.json
+        /action/lib/linter.sh
 
 
        
